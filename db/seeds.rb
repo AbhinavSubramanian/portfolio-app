@@ -44,4 +44,12 @@ end
     thumb_image: "http://via.placeholder.com/350x150",
     )
 end
+
+3.times do |technology|
+  Technology.create!(
+    name: "Technologyy #{{}}",
+    portfolio_id: Portfolio.last.id
+    )
+end
+
 puts "9 portfolio items created"
