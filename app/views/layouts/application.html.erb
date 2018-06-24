@@ -22,11 +22,9 @@
 
           <%= render "shared/application_nav" %>
 
-          <%= login_helper %>
-
           <%= yield %>
 
-          <%= @copyright %>
+          <%= render "shared/application_footer" %>
 
           <% if session[:source] %>
             <p>Thanks for visiting me from <%= session[:source] %></p>
