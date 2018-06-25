@@ -6,6 +6,10 @@ class Portfolio < ApplicationRecord
 
     validates_presence_of :title, :subtitle, :body, :main_image, :thumb_image
 
+    def self.by_position
+      order("position ASC")
+    end
+
     after_initialize :set_defaults
 
     def set_defaults
