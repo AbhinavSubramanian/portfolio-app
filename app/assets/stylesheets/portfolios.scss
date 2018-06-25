@@ -1,7 +1,8 @@
 @import "bootstrap";
 
 body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
+  min-height: 75rem;
+  background-color: #131212; /* Can be removed; just added for demo purposes */
 }
 
 .navbar {
@@ -57,4 +58,8 @@ footer {
 
 footer p {
   margin-bottom: .25rem;
+}
+
+.navbar-brand {
+  color: white;
 }
