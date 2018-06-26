@@ -1,0 +1,31 @@
+<%= form_for(nestedform) do |form| %>
+  <% if nestedform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(nestedform.errors.count, "error") %> prohibited this nestedform from being saved:</h2>
+
+      <ul>
+      <% nestedform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <ul>
+    <%= form.fields_for :contents do |content| %>
+    <li>
+      <%= content.label :name %>
+      <%= content.text_field :name %>
+    </li>
+    <% end %>
+  </ul>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

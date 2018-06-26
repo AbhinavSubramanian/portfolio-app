@@ -1,0 +1,15 @@
+<p>
+  <strong>Title:</strong>
+  <%= @nestedform.title %>
+</p>
+
+<ul>
+  <p> Contents </p>
+  <% @nestedform.contents.each do |content| %>
+    <li>
+      <%= content.name %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Edit', edit_nestedform_path(@nestedform) %> |
+<%= link_to 'Back', nestedforms_path %>

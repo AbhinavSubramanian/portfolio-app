@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nestedforms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nestedforms.each do |nestedform| %>
+      <tr>
+        <td><%= nestedform.title %></td>
+        <td><%= link_to 'Show', nestedform %></td>
+        <td><%= link_to 'Edit', edit_nestedform_path(nestedform) %></td>
+        <td><%= link_to 'Destroy', nestedform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nestedform', new_nestedform_path %>
