@@ -13,11 +13,33 @@
   </div>
 
   <div class="field">
+    <%= form.label :main_image %>
+    <%= form.file_field :main_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thumb_image %>
+    <%= form.file_field :thumb_image %>
+  </div>
+
+  <div class="field">
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
 
+  <ul>
+    <%= form.fields_for :technologies do |technology_form| %>
+    <li>
+      <%= technology_form.label :name %>
+      <%= technology_form.text_field :name %>
+    </li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+  
+
 <% end %>
