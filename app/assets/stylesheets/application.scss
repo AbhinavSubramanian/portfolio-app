@@ -168,9 +168,6 @@ body {
  * Custom Styles
  */
 
-.card {
-  margin-top: 6rem;
-}
 .card-body {
   color: black;
   text-align: left;
@@ -195,6 +192,26 @@ body {
   background-size: cover;
 }
 
+.app-card-container {
+  color: black;
+  text-align: left;
+}
 
+.app-card-container > .card {
+  padding: 40px;
+}
 
+.profile-img {
+  border: 1px solid grey;
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skill {
+margin-top: 5px;
+margin-bottom: 5px;
+}
 
